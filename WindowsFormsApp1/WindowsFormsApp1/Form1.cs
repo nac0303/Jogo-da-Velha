@@ -32,64 +32,52 @@ namespace WindowsFormsApp1
             var squaresize = this.Height / 5;
 
             VertLine1.Height = squaresize*3;
+            VertLine1.Width = (this.Width/this.Height)*10;
             VertLine1.Left = (this.Width / 2) - (VertLine1.Width*2) - squaresize/2;
             VertLine1.Top = squaresize;
+
             VertLine2.Height = squaresize*3;
+            VertLine2.Width = (this.Width / this.Height) * 10;
             VertLine2.Left = (this.Width /2) - (VertLine1.Width * 2) + squaresize/2;
             VertLine2.Top = squaresize;
 
             HorLine1.Width = squaresize*3;
+            HorLine1.Height= (this.Width / this.Height) * 10;
             HorLine1.Left = (this.Width/2) - (VertLine1.Width * 2) - (HorLine1.Width / 2) ;
             HorLine1.Top = (this.Height/2) - squaresize/2;
+
             HorLine2.Width = squaresize * 3;
+            HorLine2.Height = (this.Width / this.Height) * 10;
             HorLine2.Left = (this.Width / 2) - (VertLine1.Width * 2) - (HorLine1.Width/2);
             HorLine2.Top = (this.Height / 2) + squaresize/2;
 
+            PictureBox[,] SquareArray = { { Square1, Square2, Square3 },
+                                          { Square4, Square5, Square6 },
+                                          { Square7, Square8, Square9 } };
 
-            Square1.Width = squaresize - VertLine1.Width * 3;
-            Square1.Height = squaresize - 14;
-            Square1.Left = (this.Width / 2) - (squaresize+ squaresize/2);
-            Square1.Top = squaresize + HorLine1.Height;
+            for(int i = 0; i<3; i++)
+            {
+                for (int j = 0; j<3; j++)
+                {
+                    SquareArray[i, j].SizeMode = PictureBoxSizeMode.StretchImage;
+                    SquareArray[i,j].Width = squaresize - VertLine1.Width * 5;
+                    SquareArray[i,j].Height = squaresize - VertLine1.Width * 5;
+                    
+                        SquareArray[i,0].Left = (this.Width / 2) - (squaresize + squaresize / 2) + VertLine1.Width;
 
-            Square2.Width = squaresize - VertLine1.Width * 3;
-            Square2.Height = squaresize - 14;
-            Square2.Left = (this.Width / 2) - (squaresize / 2);
-            Square2.Top = squaresize + HorLine1.Height;
+                        SquareArray[i,1].Left = (this.Width / 2) - (squaresize / 2) + VertLine1.Width;
+                
+                        SquareArray[i,2].Left = (this.Width / 2) + (squaresize / 2) + VertLine1.Width;
+                  
+                        SquareArray[0,j].Top = squaresize + HorLine1.Height*3;
+                  
+                        SquareArray[1,j].Top = 2 * squaresize + 2 * HorLine1.Height + HorLine1.Height;
 
-            Square3.Width = squaresize - VertLine1.Width * 3;
-            Square3.Height = squaresize - 14;
-            Square3.Left = (this.Width / 2) + (squaresize/2);
-            Square3.Top = squaresize + HorLine1.Height;
-
-            Square4.Width = squaresize - VertLine1.Width * 3;
-            Square4.Height = squaresize - 14;
-            Square4.Left = (this.Width / 2) - (squaresize / 2);
-            Square4.Top = squaresize + HorLine1.Height;
-
-            Square5.Width = squaresize - VertLine1.Width * 3;
-            Square5.Height = squaresize - 14;
-            Square5.Left = (this.Width / 2) - (squaresize / 2);
-            Square5.Top = squaresize + HorLine1.Height;
-
-            Square6.Width = squaresize - VertLine1.Width*3;
-            Square6.Height = squaresize - 14;
-            Square6.Left = (this.Width / 2) - (squaresize / 2);
-            Square6.Top = squaresize + HorLine1.Height;
-
-            Square7.Width = squaresize - VertLine1.Width * 3;
-            Square7.Height = squaresize - 14;
-            Square7.Left = (this.Width / 2) - (squaresize / 2);
-            Square7.Top = squaresize + HorLine1.Height;
-
-            Square8.Width = squaresize - VertLine1.Width * 3;
-            Square8.Height = squaresize - 14;
-            Square8.Left = (this.Width / 2) - (squaresize / 2);
-            Square8.Top = squaresize + HorLine1.Height;
-
-            Square9.Width = squaresize - VertLine1.Width * 3;
-            Square9.Height = squaresize - 14;
-            Square9.Left = (this.Width / 2) - (squaresize / 2);
-            Square9.Top = squaresize + HorLine1.Height;
+                        SquareArray[2,j].Top = 3 * squaresize + 2 * HorLine1.Height + HorLine1.Height ;
+                    
+                }
+                
+            }
 
 
         }
@@ -97,6 +85,53 @@ namespace WindowsFormsApp1
         private void Form1_Resize(object sender, EventArgs e)
         {
             Center();
+        }
+
+        private void Square1_Click(object sender, EventArgs e)
+        {
+            Square1.Load("C:/Users/disrct/Downloads/image.png");
+        }
+
+
+
+        private void Square3_Click(object sender, EventArgs e)
+        {
+            Square3.Load("C:/Users/disrct/Downloads/cancel.png");
+        }
+
+        private void Square2_Click(object sender, EventArgs e)
+        {
+            Square2.Load("C:/Users/disrct/Downloads/image.png");
+        }
+
+        private void Square4_Click(object sender, EventArgs e)
+        {
+            Square4.Load("C:/Users/disrct/Downloads/cancel.png");
+        }
+
+        private void Square5_Click(object sender, EventArgs e)
+        {
+            Square5.Load("C:/Users/disrct/Downloads/image.png");
+        }
+
+        private void Square6_Click(object sender, EventArgs e)
+        {
+            Square6.Load("C:/Users/disrct/Downloads/image.png");
+        }
+
+        private void Square7_Click(object sender, EventArgs e)
+        {
+            Square7.Load("C:/Users/disrct/Downloads/cancel.png");
+        }
+
+        private void Square8_Click(object sender, EventArgs e)
+        {
+            Square8.Load("C:/Users/disrct/Downloads/cancel.png");
+        }
+
+        private void Square9_Click(object sender, EventArgs e)
+        {
+            Square9.Load("C:/Users/disrct/Downloads/image.png");
         }
     }
 
