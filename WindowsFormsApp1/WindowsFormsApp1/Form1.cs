@@ -12,6 +12,8 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
+        string x = "C:/Users/Aluno/Downloads/a/x.png";
+        string o = @"C:\Users\Aluno\Downloads\a\image.png";
         public Form1()
         {
             InitializeComponent();
@@ -89,49 +91,47 @@ namespace WindowsFormsApp1
 
         private void Square1_Click(object sender, EventArgs e)
         {
-            Square1.Load("C:/Users/disrct/Downloads/image.png");
+            Square1.Load(x);
         }
-
-
 
         private void Square3_Click(object sender, EventArgs e)
         {
-            Square3.Load("C:/Users/disrct/Downloads/cancel.png");
+            Square3.Load(o);
         }
 
         private void Square2_Click(object sender, EventArgs e)
         {
-            Square2.Load("C:/Users/disrct/Downloads/image.png");
+            Square2.Load(x);
         }
 
         private void Square4_Click(object sender, EventArgs e)
         {
-            Square4.Load("C:/Users/disrct/Downloads/cancel.png");
+            Square4.Load(x);
         }
 
         private void Square5_Click(object sender, EventArgs e)
         {
-            Square5.Load("C:/Users/disrct/Downloads/image.png");
+            Square5.Load();
         }
 
         private void Square6_Click(object sender, EventArgs e)
         {
-            Square6.Load("C:/Users/disrct/Downloads/image.png");
+            Square6.Load();
         }
 
         private void Square7_Click(object sender, EventArgs e)
         {
-            Square7.Load("C:/Users/disrct/Downloads/cancel.png");
+            Square7.Load();
         }
 
         private void Square8_Click(object sender, EventArgs e)
         {
-            Square8.Load("C:/Users/disrct/Downloads/cancel.png");
+            Square8.Load();
         }
 
         private void Square9_Click(object sender, EventArgs e)
         {
-            Square9.Load("C:/Users/disrct/Downloads/image.png");
+            Square9.Load();
         }
     }
 
