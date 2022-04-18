@@ -15,6 +15,8 @@ namespace WindowsFormsApp1
         public Form2()
         {
             InitializeComponent();
+            lblback1.Hide();
+            lblback2.Hide();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -22,41 +24,6 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var form2 = new Form1();
-            form2.Closed += (s, args) => this.Close();
-            form2.Show();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var form1 = new Form1();
-            form1.Closed += (s, args) => this.Close();
-            form1.Show();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void label5_Click(object sender, EventArgs e)
         {
@@ -77,6 +44,43 @@ namespace WindowsFormsApp1
         {
             Info info = new Info();
             info.Show();
+        }
+
+        private void lblMultClassico_Click(object sender, EventArgs e)
+        {
+            if(lblMultClassico.Text != "Online")
+            {
+                lblMultClassico.Text = "Online";
+                lblSingleClassico.Text = "Local";
+                lblback1.Show();
+            }
+            else
+            {
+
+            }
+        }
+
+        private void lblMultSuper_Click(object sender, EventArgs e)
+        {
+            if (lblMultSuper.Text != "Online")
+            {
+                lblMultSuper.Text = "Online";
+                lblSingleSuper.Text = "Local";
+                lblback2.Show();
+            }
+            else
+            {
+
+            }
+            
+        }
+
+        private void lblback1_Click(object sender, EventArgs e)
+        {
+            lblMultClassico.Text = "Multiplayer";
+            lblSingleClassico.Text = "Online";
+            lblback1.Hide();
+
         }
     }
 }
